@@ -1,3 +1,30 @@
+:root {
+  --primary-bright-red: hsl(12, 88%, 59%);
+  --primary-dark-blue: hsl(228, 39%, 23%);
+
+  --neutral-dark-grayish-blue: hsl(227, 12%, 61%);
+  --neutral-very-dark-blue: hsl(233, 12%, 13%);
+  --neutral-very-pale-red: hsl(13, 100%, 96%);
+  --neutral-vary-light-gray: hsl(0, 0%, 98%);
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+
+
 /*  */
 .attribution {
   font-size: 11px;
