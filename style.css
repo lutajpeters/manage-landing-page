@@ -7,7 +7,7 @@
   --neutral-dark-grayish-blue: hsl(227, 12%, 61%);
   --neutral-very-dark-blue: hsl(233, 12%, 13%);
   --neutral-very-pale-red: hsl(13, 100%, 96%);
-  --neutral-vary-light-gray: hsl(0, 0%, 98%);
+  --neutral-very-light-gray: hsl(0, 0%, 98%);
 
   --font-family: 'Be Vietnam Pro', sans-serif;
   --heading-font: var(--font-family);
@@ -24,7 +24,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   box-sizing: border-box;
   height: 100%;
 }
@@ -37,6 +38,65 @@ html:focus-within {
 
 body {
   margin: 0;
+  font-family: var(--font-family);
+  color: var(--primary-dark-blue);
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+
+}
+
+/*  */
+
+.section__1 {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 50em) {
+  .section__1 {
+    flex-direction: column-reverse;
+  }
+}
+
+.columns {
+  /* TODO: set flex properties to get even width columns */
+}
+
+
+.heading__primary {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.button__primary {
+  border: none;
+  cursor: pointer;
+  border-radius: 100vmax;
+  padding: .7em 2.6em;
+  font-weight: bold;
+  font-size: medium;
+  color: var(--neutral-very-light-gray);
+  background-color: var(--primary-bright-red);
+
+  box-shadow: 0 1.05em 1em -1em var(--primary-bright-red);
+}
+
+/* TODO: find closer match for background color on hover */
+.button__primary:hover,
+.button__primary:focus-visible {
+  background-color: var(--neutral-very-pale-red);
+}
+
+.inverted {
+  background-color: var(--neutral-very-light-gray);
+  color: var(--primary-bright-red);
+
 }
 
 
