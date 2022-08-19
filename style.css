@@ -37,7 +37,23 @@ html:focus-within {
 
 body {
   margin: 0;
+  font-family: var(--font-family);
+  color: var(--primary-dark-blue);
 }
+
+.container {
+  --max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - var(--padding));
+  margin-inline: auto;
+}
+
+/*  */
+
+
+
+
 
 
 
