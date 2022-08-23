@@ -66,6 +66,8 @@ body {
 
 .columns {
   /* TODO: set flex properties to get even width columns */
+  flex: 1;
+  flex-basis: 100%;
 }
 
 
