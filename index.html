@@ -13,15 +13,10 @@
 
 <body>
   <header class="primary__header">
-    <div class="container">
+    <div class="header__container">
       <a href="#"><img src="/logo.svg" alt="Logo image"></a>
-      <button class="menu__icon" aria-controls="primary_navigation">
-        <img class="icon__hamburger" src="/icon-hamburger.svg" alt="hamburger menu icon" aria-hidden="true" />
-        <img class="icon__close" src="/icon-close.svg" alt="close icon" aria-hidden="true" />
-        <span class="visually__hidden">Menu</span>
-      </button>
-      <nav class="header__navigation" aria-label="Primary">
-        <ul id="primary_navigation" role="list" class="navigation__list">
+      <nav id="primary_navigation" class="header__navigation" aria-label="Primary">
+        <ul role="list" class="navigation__list">
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">About Us</a></li>
@@ -29,7 +24,13 @@
           <li><a href="#">Community</a></li>
         </ul>
       </nav>
-      <button class="button__primary">Get Started</button>
+      <button class="menu__icon" aria-controls="primary_navigation" aria-expanded="false">
+        <img class="icon__hamburger" src="/icon-hamburger.svg" alt="hamburger menu icon" aria-hidden="true" />
+        <img class="icon__close" src="/icon-close.svg" alt="close icon" aria-hidden="true" />
+        <span class="visually__hidden">Menu</span>
+      </button>
+      <button class="button__primary navigation__button">Get Started</button>
+
     </div>
   </header>
 
