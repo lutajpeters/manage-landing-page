@@ -12,11 +12,11 @@
 </head>
 
 <body>
-  <header class="primary-header">
-    <div class="container">
-      <a href="#"><img src="/public/logo.svg" alt="Logo image"></a>
-      <nav class="header-navigation" aria-label="Primary">
-        <ul role="list" class="navigation-list">
+  <header class="primary__header">
+    <div class="header__container">
+      <a href="#"><img src="/logo.svg" alt="Logo image"></a>
+      <nav id="primary_navigation" class="header__navigation" aria-label="Primary">
+        <ul role="list" class="navigation__list">
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">About Us</a></li>
@@ -24,7 +24,13 @@
           <li><a href="#">Community</a></li>
         </ul>
       </nav>
-      <button class="get-started">Get Started</button>
+      <button class="menu__icon" aria-controls="primary_navigation" aria-expanded="false">
+        <img class="icon__hamburger" src="/icon-hamburger.svg" alt="hamburger menu icon" aria-hidden="true" />
+        <img class="icon__close" src="/icon-close.svg" alt="close icon" aria-hidden="true" />
+        <span class="visually__hidden">Menu</span>
+      </button>
+      <button class="button__primary navigation__button">Get Started</button>
+
     </div>
   </header>
 
@@ -41,7 +47,7 @@
       </div>
 
       <div class="columns">
-        <img src="/public/illustration-intro.svg" alt="" />
+        <img src="/illustration-intro.svg" alt="" width="100%" />
       </div>
     </section>
 
@@ -118,7 +124,7 @@
 
   <footer class="page-footer">
     <div class="columns">
-      <a href="#"><img src="/public/logo.svg" alt=""></a>
+      <a href="#"><img src="/logo.svg" alt=""></a>
       <ul role="list" aria-label="Social links">
         <li>
           <a href="#" aria-label="facebook">
