@@ -70,11 +70,7 @@ body {
   gap: 1rem;
 }
 
-@media screen and (max-width: 50em) {
-  .section__1 {
-    flex-direction: column-reverse;
-  }
-}
+
 
 .columns {
   /* TODO: set flex properties to get even width columns */
@@ -142,7 +138,6 @@ body {
 .primary__header {
   width: 100%;
   padding-top: 1rem;
-  border: 2px solid red;
 }
 
 .navigation__button {
@@ -152,6 +147,56 @@ body {
 .navigation__list {
   font-size: medium;
   list-style: none;
+}
+
+.paragraphs {
+  opacity: 0.5;
+  max-width: 32ch;
+}
+
+.section__2 {
+  display: flex;
+  gap: 1rem;
+}
+
+.section__2-heading {
+  font-size: 2.5rem;
+}
+
+.paragraphs__extended {
+  max-width: 41ch;
+}
+
+.section__4 {
+  height: 6rem;
+  color: #fff;
+  background-color: var(--primary-bright-red);
+}
+
+.container__flex {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.container__flex > div:last-child {
+  text-align: end;
+}
+
+.section__4-text {
+  max-width: 50%;
+  font-size: x-large;
+}
+
+:where(.spacer :not(:first-child)) {
+  margin-top: var(--default-spacing, 1rem);
+}
+
+
+@media screen and (max-width: 50em) {
+  .section__1 {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (min-width: 50em) {
