@@ -77,6 +77,7 @@ body {
   /* TODO: set flex properties to get even width columns */
   flex: 1;
   flex-basis: 100%;
+  border: 5px solid green;
 }
 
 
@@ -182,8 +183,8 @@ body {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: url("/public/bg-tablet-pattern.svg"),
-    url("/public/bg-tablet-pattern.svg");
+  background-image: url("/bg-tablet-pattern.svg"),
+    url("/bg-tablet-pattern.svg");
   background-position: -15rem -5rem, 70rem -45rem;
   background-repeat: no-repeat;
   opacity: 0.1;
@@ -208,6 +209,46 @@ body {
   margin-top: var(--default-spacing, 1rem);
 }
 
+.page-footer {
+  display: flex;
+  border: 5px solid blue;
+}
+
+
+.page-footer a {
+  text-decoration: none;
+  color: var(--neutral-very-light-gray);
+}
+
+.page-footer a:where(:hover, :focus) {
+  color: var(--primary-bright-red);
+}
+
+
+.social-links {
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  gap: 0.6rem;
+  background-color: black;
+}
+
+
+.social-links a:is(:hover, :focus) .social-icons {
+  background-color: var(--primary-bright-red);
+  fill: var(--primary-bright-red);
+}
+
+.footer-navigation {
+  columns: 2;
+  background-color: black;
+}
+
+@media screen and (max-width: 50em) {
+  .social-icons {
+    width: 0.5rem;
+  }
+}
 
 
 @media screen and (max-width: 50em) {
@@ -220,6 +261,9 @@ body {
   .section__4-text {
     min-width: 100%;
     text-align: center;
+  }
+  .page-footer {
+    flex-direction: column-reverse;
   }
 }
 
