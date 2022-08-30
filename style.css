@@ -72,12 +72,10 @@ body {
 }
 
 
-
 .columns {
   /* TODO: set flex properties to get even width columns */
   flex: 1;
   flex-basis: 100%;
-  border: 5px solid green;
 }
 
 
@@ -129,11 +127,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-
-.header__navigation {
-  /* border: 2px solid purple; */
 }
 
 
@@ -209,39 +202,51 @@ body {
   margin-top: var(--default-spacing, 1rem);
 }
 
-.page-footer {
+.page__footer {
   display: flex;
-  border: 5px solid blue;
 }
 
 
-.page-footer a {
+.page__footer a {
   text-decoration: none;
   color: var(--neutral-very-light-gray);
 }
 
-.page-footer a:where(:hover, :focus) {
+.page__footer a:where(:hover, :focus) {
   color: var(--primary-bright-red);
 }
 
 
-.social-links {
+.social__links {
   min-width: 20px;
   min-height: 20px;
   display: flex;
   gap: 0.6rem;
   background-color: black;
+  list-style: none;
 }
 
 
-.social-links a:is(:hover, :focus) .social-icons {
+.social__links a:is(:hover, :focus) .social-icons {
   background-color: var(--primary-bright-red);
   fill: var(--primary-bright-red);
 }
 
-.footer-navigation {
+.footer__navigation {
   columns: 2;
-  background-color: black;
+  list-style: none;
+}
+
+
+
+.footer {
+  width: 100%;
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-very-light-gray);
+}
+
+.max__height {
+  height: 100%;
 }
 
 @media screen and (max-width: 50em) {
