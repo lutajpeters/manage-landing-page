@@ -14,7 +14,11 @@
 <body>
   <header class="primary__header">
     <div class="header__container">
-      <a href="#"><img src="/logo.svg" alt="Logo image"></a>
+      <a href="#" aria-label="Logo icon">
+        <svg class="logo__icon" width="146" height="24">
+          <use xlink:href="/logo.svg#logo"></use>
+        </svg>
+      </a>
       <nav id="primary_navigation" class="header__navigation" aria-label="Primary">
         <ul role="list" class="navigation__list">
           <li><a href="#">Pricing</a></li>
@@ -117,9 +121,13 @@
 
   <footer class="page__footer">
     <div class="footer">
-      <div class="container container__flex">
-        <div class="columns max__height">
-          <a href="#"><img src="/logo.svg" alt=""></a>
+      <div class="container container__flex footer__grid">
+        <div class="columns max__height footer__grid-social">
+          <a href="#" aria-label="Logo icon">
+            <svg class="logo__icon" width="146" height="24">
+              <use xlink:href="/logo.svg#logo"></use>
+            </svg>
+          </a>
           <ul class="social__links" role="list" aria-label="Social Network links">
             <li>
               <a href="#" aria-label="Facebook">
@@ -130,35 +138,35 @@
             </li>
             <li>
               <a href="#" aria-label="Youtube">
-                <svg class="icon">
+                <svg class="social__icons">
                   <use xlink:href="/social-icons.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" aria-label="Twitter">
-                <svg class="icon">
+                <svg class="social__icons">
                   <use xlink:href="/social-icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" aria-label="Pinterest">
-                <svg class="icon">
+                <svg class="social__icons">
                   <use xlink:href="/social-icons.svg#icon-pinterest"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" aria-label="Instagram">
-                <svg class="icon">
+                <svg class="social__icons">
                   <use xlink:href="/social-icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="columns max__height">
+        <div class="columns max__height footer__grid-navigation">
           <nav class="max__height">
             <ul class="footer__navigation" role="list" aria-label="Footer Navigation">
               <li>
@@ -185,8 +193,8 @@
             </ul>
           </nav>
         </div>
-        <div class="columns max__height">
-          <form action="">
+        <div class="columns max__height footer__grid-cta">
+          <form action="" class="footer__form">
             <input type="email">
             <button class="button__primary">Go</button>
           </form>
