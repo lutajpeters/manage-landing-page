@@ -14,7 +14,11 @@
 <body>
   <header class="primary__header">
     <div class="header__container">
-      <a href="#"><img src="/logo.svg" alt="Logo image"></a>
+      <a href="#" aria-label="Logo icon">
+        <svg class="logo__icon" width="146" height="24">
+          <use xlink:href="/logo.svg#logo"></use>
+        </svg>
+      </a>
       <nav id="primary_navigation" class="header__navigation" aria-label="Primary">
         <ul role="list" class="navigation__list">
           <li><a href="#">Pricing</a></li>
@@ -115,79 +119,90 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="columns">
-      <a href="#"><img src="/logo.svg" alt=""></a>
-      <ul role="list" aria-label="Social links">
-        <li>
-          <a href="#" aria-label="facebook">
-            <img src="" alt="">
+  <footer class="page__footer">
+    <div class="footer">
+      <div class="container container__flex footer__grid">
+        <div class="columns max__height footer__grid-social">
+          <a href="#" aria-label="Logo icon">
+            <svg class="logo__icon" width="146" height="24">
+              <use xlink:href="/logo.svg#logo"></use>
+            </svg>
           </a>
-        </li>
-        <li>
-          <a href="#" aria-label="youtube">
-            <img src="" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="twitter">
-            <img src="" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="pinterest">
-            <img src="" alt="">
-          </a>
-        </li>
-        <li>
-          <a href="#" aria-label="instagram">
-            <img src="" alt="">
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="columns">
-      <nav class="footer-navigation" aria-label="Secondary">
-        <ul role="list">
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">Careers</a>
-          </li>
-          <li>
-            <a href="#">Community</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="columns">
-      <form action="">
-        <input type="email">
-        <button>Go</button>
-      </form>
-      <p>
-        Copyright &copy; 2020. All Rights Reserved
-      </p>
-    </div>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Alluta Peters</a>.
+          <ul class="social__links" role="list" aria-label="Social Network links">
+            <li>
+              <a href="#" aria-label="Facebook">
+                <svg class="social__icons">
+                  <use xlink:href="/social-icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Youtube">
+                <svg class="social__icons">
+                  <use xlink:href="/social-icons.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter">
+                <svg class="social__icons">
+                  <use xlink:href="/social-icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Pinterest">
+                <svg class="social__icons">
+                  <use xlink:href="/social-icons.svg#icon-pinterest"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <svg class="social__icons">
+                  <use xlink:href="/social-icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="columns max__height footer__grid-navigation">
+          <nav class="max__height">
+            <ul class="footer__navigation" role="list" aria-label="Footer Navigation">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Pricing</a>
+              </li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Community</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="columns max__height footer__grid-cta">
+          <form action="" class="footer__form">
+            <input type="email">
+            <button class="button__primary">Go</button>
+          </form>
+          <p>
+            Copyright &copy; 2020. All Rights Reserved
+          </p>
+        </div>
+      </div>
     </div>
   </footer>
 
