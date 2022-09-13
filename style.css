@@ -150,9 +150,17 @@ body {
 }
 
 .section__2 {
+  height: 100%;
   display: flex;
   gap: 1rem;
+  flex-direction: column;
+  align-items: center;
 }
+
+.column__centered {
+  width: fit-content;
+}
+
 
 .section__2-heading {
   font-size: 2.5rem;
@@ -160,7 +168,54 @@ body {
 
 .paragraphs__extended {
   max-width: 41ch;
+  grid-column: 1 / -1;
 }
+
+.numbered__list {
+  list-style: none;
+  counter-reset: count;
+  padding: 0;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.numbered__list-heading {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  line-height: 1;
+}
+
+/* Prt 8: 20 mins */
+
+.numbered__list li {
+  counter-increment: count;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.numbered__list li::before,
+.numbered__list li::after {
+  height: 40px;
+}
+
+.numbered__list li::before {
+  content: "0" counter(count);
+  background-color: var(--primary-bright-red);
+  color: var(--neutral-very-pale-red);
+  font-weight: bold;
+  padding: 0 1.3rem;
+  border-radius: 100vmax;
+  display: flex;
+  align-items: center;
+
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+
 
 .section__4 {
   width: 100%;
@@ -249,7 +304,7 @@ body {
 }
 
 
-.footer > * > * {
+.footer>*>* {
   outline: 2px solid red;
   margin-block: 5px;
 }
@@ -258,7 +313,7 @@ body {
   display: grid;
   gap: 1.3rem;
   justify-items: center;
-  grid-template-areas: 'form' 'nav' 'social-logos';
+  grid-template-areas: 'form''nav''social-logos';
 }
 
 .footer__grid-social {
@@ -283,7 +338,6 @@ body {
   height: 100%;
 }
 
-/* 34:50 - spacing footer columns */
 
 input:where([type="email"]) {
   border-radius: 100vmax;
@@ -294,6 +348,41 @@ input:where([type="email"]) {
 .footer__form {
   display: flex;
   gap: 0.4rem;
+}
+
+@media screen and (max-width: 35em) {
+  .numbered__list li::after {
+    background: var(--neutral-very-pale-red);
+    content: '';
+    display: block;
+    z-index: -1;
+    border-radius: 100vmax;
+    box-shadow: 3rem 0 0 var(--neutral-very-pale-red);
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+
+@media screen and (min-width: 50em) {
+  .section__2 {
+    flex-direction: row;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  .column__centered>p {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .paragraphs__extended {
+    grid-column: 2 / -1;
+  }
 }
 
 @media screen and (min-width: 50em) {
